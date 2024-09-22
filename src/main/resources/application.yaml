@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: kotlin-spring-ai-playground
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}

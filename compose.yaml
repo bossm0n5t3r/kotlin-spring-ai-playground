@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: 'kotlin-spring-ai-postgres'
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=kotlin_spring_ai_database'
+      - 'POSTGRES_PASSWORD=postgres'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '54324:5432'

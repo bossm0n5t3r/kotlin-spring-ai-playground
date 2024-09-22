@@ -1,0 +1,15 @@
+### Generation With Autoconfigured
+POST localhost:8080/generation/autoconfigured
+Content-Type: application/json
+
+{
+  "text": "Tell me a joke"
+}
+
+### generationWithProgrammatically
+POST localhost:8080/generation/programmatically
+Content-Type: application/json
+
+{
+  "text": "Tell me a joke"
+}

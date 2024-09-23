@@ -1,0 +1,13 @@
+### Returning a ChatResponse
+POST localhost:8080/chat-client-responses/chat-response
+Content-Type: application/json
+
+{
+  "text": "Tell me a joke"
+}
+
+### Returning an Entity
+GET localhost:8080/chat-client-responses/entity
+
+### Returning an Entity With Parameterized Type Reference
+GET localhost:8080/chat-client-responses/entity-with-parameterized-type-reference

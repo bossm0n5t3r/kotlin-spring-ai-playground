@@ -40,6 +40,13 @@ class ChatClientResponsesService(
             .stream()
             .content()
 
+    fun streamingChatResponses(userInput: String): Flux<ChatResponse> =
+        this.chatClientAutoconfigured
+            .prompt()
+            .user(userInput)
+            .stream()
+            .chatResponse()
+
     fun streamingResponsesWithConverter(): List<MathematicianPublications> {
         val converter = BeanOutputConverter(object : ParameterizedTypeReference<List<MathematicianPublications>>() {})
         val prompt =

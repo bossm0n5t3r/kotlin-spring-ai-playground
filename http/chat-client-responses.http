@@ -21,5 +21,14 @@ Content-Type: application/json
   "text": "Tell me a joke"
 }
 
+### Streaming Chat Responses
+POST localhost:8080/chat-client-responses/streaming-chat-responses
+Accept: text/event-stream
+Content-Type: application/json
+
+{
+  "text": "Tell me a joke"
+}
+
 ### Streaming Responses With Converter
 GET localhost:8080/chat-client-responses/streaming-responses-with-converter

@@ -46,6 +46,11 @@ class AiController(
         @RequestBody question: Question,
     ): Flux<String> = chatClientResponsesService.streamingResponses(question.text)
 
+    @PostMapping("/chat-client-responses/streaming-chat-responses", produces = [MediaType.TEXT_EVENT_STREAM_VALUE])
+    fun streamingChatResponses(
+        @RequestBody question: Question,
+    ): Flux<ChatResponse> = chatClientResponsesService.streamingChatResponses(question.text)
+
     @GetMapping("/chat-client-responses/streaming-responses-with-converter")
     fun streamingResponsesWithConverter(): List<MathematicianPublications> = chatClientResponsesService.streamingResponsesWithConverter()
 }

@@ -11,3 +11,15 @@ GET localhost:8080/chat-client-responses/entity
 
 ### Returning an Entity With Parameterized Type Reference
 GET localhost:8080/chat-client-responses/entity-with-parameterized-type-reference
+
+### Streaming Responses
+POST localhost:8080/chat-client-responses/streaming-responses
+Accept: text/event-stream
+Content-Type: application/json
+
+{
+  "text": "Tell me a joke"
+}
+
+### Streaming Responses With Converter
+GET localhost:8080/chat-client-responses/streaming-responses-with-converter
